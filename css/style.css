@@ -215,6 +215,10 @@ button.lg {
   color: #2a46c0;
 }
 
+.container, footer {
+  max-width: 768px;
+}
+
 .container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -233,7 +237,6 @@ button.lg {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: 768px;
   margin: auto;
 }
 
@@ -469,6 +472,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin: auto;
 }
 
 footer h1 {
