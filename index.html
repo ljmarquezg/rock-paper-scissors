@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
+
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <div class="container">
+    <header>
+      <figure class="logo">
+        <img src="./images/logo-bonus.svg" alt="logo">
+      </figure>
+      <div class="right">
+        <p class="title">Score</p>
+        <p class="dark-text" id="score">-</p>
+      </div>
+    </header>
 
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="table">
+      <div class="game">
+        <div id="board"><img src="images/bg-pentagon.svg" alt="scissor"></div>
+        <div id="selectedZone">
+          <div class="player-spot-1">
+            <div class="title">You Picked</div>
+            <div id="player1" class="holder"></div>
+          </div>
+          <div class="player-spot-2">
+            <div class="title">The House Picked</div>
+            <div id="player2" class="holder"></div>
+          </div>
+          <div class="footer">
+            <div id="result"></div>
+            <button id="reset" type="button" class="lg">Play Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="modal" id="rulesModal">
+    <div class="modal-header">
+      <h3>Rules</h3>
+    </div>
+    <div class="modal-body">
+      <figure>
+        <img src="./images/image-rules-bonus.svg" alt="rules">
+      </figure>
+    </div>
+    <div class="modal-footer">
+      <button class="close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <path class="close" fill-rule="evenodd"
+            d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+            opacity=".25" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/ljmarquezg">Luis José Márquez González</a>.
+    </div>
+    <button id="rulesBtn" class="float" type="button" modal-target="#rulesModal">Rules</button>
+  </footer>
 </body>
+<script src="js/index.js"></script>
+
 </html>
